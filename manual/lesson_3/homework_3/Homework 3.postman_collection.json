@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "f1777431-123f-4f55-a677-0840db3b870c",
+		"name": "Homework 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30763056"
+	},
+	"item": [
+		{
+			"name": "Valid Data Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"firstname\":\"Kim\",\r\n    \"lastname\":\"Black\",\r\n    \"email\":\"test-2@test.com\",\r\n    \"password\":\"Test1234\",\r\n    \"registrationMethod\":\"default\",\r\n    \"websiteId\":4,\r\n    \"clientId\":\"memberId\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uvp-0000-uhc-desktop.gusadev.com/ms/customer/registration",
+					"protocol": "https",
+					"host": [
+						"uvp-0000-uhc-desktop",
+						"gusadev",
+						"com"
+					],
+					"path": [
+						"ms",
+						"customer",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blank email Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"tt\",\r\n    \"lastname\":\"tt\",\r\n    \"email\":\"\",\r\n    \"password\":\"Test1234\",\r\n    \"registrationMethod\":\"default\",\r\n    \"websiteId\":4,\r\n    \"clientId\":\"memberId\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uvp-0000-uhc-desktop.gusadev.com/ms/customer/registration",
+					"protocol": "https",
+					"host": [
+						"uvp-0000-uhc-desktop",
+						"gusadev",
+						"com"
+					],
+					"path": [
+						"ms",
+						"customer",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid First Name Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"firstname\":\"Արամ\",\r\n    \"lastname\":\" 000 Black\",\r\n    \"email\":\"test-11@test.com\",\r\n    \"password\":\"Test1234\",\r\n    \"registrationMethod\":\"default\",\r\n    \"websiteId\":4,\r\n    \"clientId\":\"memberId\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uvp-0000-uhc-desktop.gusadev.com/ms/customer/registration",
+					"protocol": "https",
+					"host": [
+						"uvp-0000-uhc-desktop",
+						"gusadev",
+						"com"
+					],
+					"path": [
+						"ms",
+						"customer",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Last Name Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"firstname\":\"Kim 000\",\r\n    \"lastname\":\" 000 Black\",\r\n    \"email\":\"test-111@test.com\",\r\n    \"password\":\"Test1234\",\r\n    \"registrationMethod\":\"default\",\r\n    \"websiteId\":4,\r\n    \"clientId\":\"memberId\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uvp-0000-uhc-desktop.gusadev.com/ms/customer/registration",
+					"protocol": "https",
+					"host": [
+						"uvp-0000-uhc-desktop",
+						"gusadev",
+						"com"
+					],
+					"path": [
+						"ms",
+						"customer",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Password Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"firstname\":\"Kim 000\",\r\n    \"lastname\":\"Black\",\r\n    \"email\":\"test1111@test.com\",\r\n    \"password\":\"♣☺♂Test1234\",\r\n    \"registrationMethod\":\"default\",\r\n    \"websiteId\":4,\r\n    \"clientId\":\"memberId\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uvp-0000-uhc-desktop.gusadev.com/ms/customer/registration",
+					"protocol": "https",
+					"host": [
+						"uvp-0000-uhc-desktop",
+						"gusadev",
+						"com"
+					],
+					"path": [
+						"ms",
+						"customer",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Data Request with environment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"firstname\":\"{{firstname}}\",\r\n    \"lastname\":\"{{lastname}}\",\r\n    \"email\":\"{{email}}\",\r\n    \"password\":\"{{password}}\",\r\n    \"registrationMethod\":\"{{registrationMethod}}\",\r\n    \"websiteId\": {{websiteId}},\r\n    \"clientId\":\"{{clientId}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uvp-0000-uhc-desktop.gusadev.com/ms/customer/registration",
+					"protocol": "https",
+					"host": [
+						"uvp-0000-uhc-desktop",
+						"gusadev",
+						"com"
+					],
+					"path": [
+						"ms",
+						"customer",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
